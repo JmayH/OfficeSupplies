@@ -31,19 +31,18 @@ public class Book
 	public void editPage(int page, String newText)
 	{
 		pages[page] = newText;
-		return newText;
 	}
 	public String readPages(int numberOfPages)
 	{
-		output = "";
+		String output = "";
 		for (int i = 0; i < numberOfPages; i++)
 		{
-			output += "Page " + bookmark;
+			output += "Page " + (bookmark + i);
 			output += "\n--------\n";
 			output += pages[bookmark + i];
 			output += "\n--------\n";
-			bookmark++;
 		}
+		bookmark += numberOfPages;
 		return output;
 	}
 	public void setBookmark(int page)
