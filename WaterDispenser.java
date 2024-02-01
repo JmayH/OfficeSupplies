@@ -12,7 +12,7 @@ public class WaterDispenser
 
     public void fillcup()
     {
-        if (cup > 0 && water > 0)
+        if (cups > 0 && water > 0)
         {
             cups--;
             water --;
@@ -28,10 +28,10 @@ public class WaterDispenser
     }
     public void fillcup(int x)
     {
-        if (cup >= x && water >= x)
+        if (cups >= x && water >= x)
         {
-            cups-x;
-            water -x;
+            cups = cups-x;
+            water = water -x;
         }
         else
         {
@@ -56,7 +56,7 @@ public class WaterDispenser
     {
         return cups;
     }
-    public getWater()
+    public String getWater()
     {
         return water/16.0 + " gallons" ; 
     }
