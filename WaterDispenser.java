@@ -26,6 +26,22 @@ public class WaterDispenser
                 System.out.println("Ran out of water. Please restock");
         }
     }
+    public void fillcup(int x)
+    {
+        if (cup >= x && water >= x)
+        {
+            cups-x;
+            water -x;
+        }
+        else
+        {
+           if (cups < x )
+            System.out.println("Not enough cups. Please fill a lower number or restock");
+        
+            if(water < 0)
+                System.out.println("Ran out of water. Please fill a lower number of cups or restock");
+        }
+    }
     
     public void restockCups()
     {
