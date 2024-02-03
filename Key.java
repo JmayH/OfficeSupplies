@@ -2,38 +2,36 @@ public class Key
 {
     private boolean on;
     private String value;
-    private boolean shift;
+    private String valuetwo;
 
 
-    public Key(String value, boolean shift)
+    public Key(String value, String valuetwo)
     {
         this.value = value;
-        this.name = name;
-        this.shift = false;
+	this.valuetwo = valuetwo;
+	this.on = false;
     }
 
-    public void keyOn()
-    {
-        on = true;
-    }
     public void keyOff()
     {
         on = false;
     }
-
-    public String getValue()
+    public boolean getOn()
     {
-        if (shift == false)
+	return on;
+    }
+
+    public String press(shift)
+    {
+	on = true;
+        
+	if (shift == false)
         {
-            return value
+            return value;
         }
         else
         {
-            return value.toUpperCase();
-
+            return valuetwo;
         }
     }
-
-
-
 }
