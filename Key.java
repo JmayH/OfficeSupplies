@@ -20,8 +20,12 @@ public class Key
     {
 	return on;
     }
+	public String getValue()
+	{
+		return value;
+	}
 
-    public String press(shift)
+    public String press(boolean shift)
     {
 	on = true;
         
