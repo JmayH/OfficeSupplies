@@ -90,7 +90,7 @@ public class OfficeSuppliesTester
         System.out.println("Test passed. Read 1 page from bookmark.");
         System.out.println("Total Book tests passed: " + testsPassed + "/7");
 
-        testspassed = 0;
+        testsPassed = 0;
 
         //testing Keyboard.java
         
