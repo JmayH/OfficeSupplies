@@ -12,6 +12,7 @@ public class Keyboard
 
 	public Keyboard()
 	{
+		keyArray = new Key[46];
 		outLog = "";
 		String[] l = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=",
 						"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\",
@@ -48,6 +49,14 @@ public class Keyboard
 		}
 	}
 	
+	public String getLog()
+	{
+		// Returns log and clears it
+		String returnlog = outLog;
+		outLog = "";
+		return returnlog;
+	}
+
 	public Key[] getKeysPressed()
 	{
 		int total = 0;
