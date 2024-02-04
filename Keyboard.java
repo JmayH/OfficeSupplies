@@ -1,5 +1,5 @@
 /**
- * Keyboard.java
+ * Keyboard.java models a keyboard and allows for you to type
  * @author August Cho
  * @author Jamie Hsieh
  * @version 2024-02-03
@@ -9,7 +9,9 @@ public class Keyboard
 {
 	private Key[] keyArray;
 	private String outLog;
-
+    /**
+     * Constructor for objects of Keyboard class
+     */
 	public Keyboard()
 	{
 		keyArray = new Key[46];
@@ -27,7 +29,12 @@ public class Keyboard
 			keyArray[i] = new Key(l[i], u[i]);
 		}
 	}
-	
+	/**
+     * pressKey method takes in a key value and whether or not the the [shift] key is on
+     * 
+     * @param value  the value of the primary value of key pressed
+     * @param shift whether or not shift is on when pressing the key 
+     */
 	public void pressKey(String value, boolean shift)
 	{
 		for (Key k : keyArray)
@@ -38,6 +45,11 @@ public class Keyboard
 			}
 		}
 	}
+    /**
+     * unpressKey method takes in a key value that was previously set as on and changes it to false
+     * 
+     * @param value  value of key being unpressed
+     */
 	public void unpressKey(String value)
 	{
 		for (Key k : keyArray)
@@ -48,7 +60,11 @@ public class Keyboard
 			}
 		}
 	}
-	
+	/**
+     * getLog method returns log of keys typed and clears it
+     * 
+     * @return returnlog  log of keys pressed
+     */
 	public String getLog()
 	{
 		// Returns log and clears it
@@ -56,6 +72,10 @@ public class Keyboard
 		outLog = "";
 		return returnlog;
 	}
+	/**
+	 * getKeysPressed method returns the keys that have have the boolean value "on" as true
+	 * @return pressed  array of keys on
+	 */
 
 	public Key[] getKeysPressed()
 	{
